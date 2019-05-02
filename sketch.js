@@ -16,7 +16,7 @@ function draw() {
 	if(mouseIsPressed){
 		speedMult = 2;
 	} else {
-		speedMult = deSpeedMult;
+		speedMult = defSpeedMult;
 	}
 	
 	updateCanvas();

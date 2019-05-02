@@ -8,7 +8,9 @@ var canvas;
 function setup() {
 	canvas = createCanvas(windowWidth, windowHeight)
 	background(200, 225, 255);
-	AI.init(15);
+	var AIapart = abs(AI.getX(0)-AI.getX(1));
+	var AIlead = abs(AI.getX(0)-AIapart);
+	AI.init(floor((width/2-AIlead)/AIapart));
 };
 
 function draw() {
@@ -69,9 +71,9 @@ function reset() {
 };
 
 function updateCanvas() {
-	// if(canvas.height != windowHeight || canvas.width != windowWidth){
+    if(canvas.height != windowHeight || canvas.width != windowWidth){
 	resizeCanvas(windowWidth, windowHeight)
-	// }
+    }
 };
 
 function windowResized() {

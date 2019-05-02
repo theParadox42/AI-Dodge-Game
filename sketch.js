@@ -1,6 +1,7 @@
 var transPoint = new Player(0);
 
 var speedMult = 15;
+var defSpeedMult = speedMult;
 
 var canvas;
 
@@ -11,6 +12,13 @@ function setup() {
 };
 
 function draw() {
+	
+	if(mouseIsPressed){
+		speedMult = 2;
+	} else {
+		speedMult = deSpeedMult;
+	}
+	
 	updateCanvas();
 
 	background(200, 225, 255);

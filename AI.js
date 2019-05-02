@@ -97,5 +97,5 @@ AI.reset = function() {
 		this.ais[i].reset(this.getX(i), r);
 		this.ais.push(new this(this.getX(i + l), r, this.ais[i].net));
 	}
-	this.ais[this.ais.length-1] = new this(this.getX(this.ais.length-1), 0);
+// 	this.ais[this.ais.length-1] = new this(this.getX(this.ais.length-1), 0);
 }

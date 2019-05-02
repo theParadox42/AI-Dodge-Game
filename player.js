@@ -45,23 +45,23 @@ Player.prototype.update = function(){
 };
 Player.prototype.display = function(){
 	if(!this.dead){
-    push();
+	    push();
 
-    noStroke();
-    fill(this.color);
-    rect(this.x, this.y, this.w, this.h, 5);
-	
-    fill(255);
-    textSize(15);
-    textAlign(CENTER,CENTER);
-    text(this.points, this.x+this.w/2, this.y+this.h/2)
+	    noStroke();
+	    fill(this.color);
+	    rect(this.x, this.y, this.w, this.h, 5);
 
-    pop();
+	    fill(255);
+	    textSize(15);
+	    textAlign(CENTER,CENTER);
+	    text(this.points, this.x+this.w/2, this.y+this.h/2)
+
+	    pop();
 	}
 };
 Player.prototype.run = function(){
     if(!this.dead){
-        this.input(keyIsPressed||mouseIsPressed);
+        this.input(keyIsPressed);
         this.update();
     }
 };

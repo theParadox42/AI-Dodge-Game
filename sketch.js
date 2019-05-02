@@ -1,6 +1,6 @@
 var transPoint = new Player(0);
 
-var speedMult = 3;
+var speedMult = 15;
 
 var canvas;
 

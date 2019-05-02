@@ -3,7 +3,7 @@ function AI(x, learn, net) {
 	if (net) {
 		this.net = net.copy();
 	} else {
-		this.net = new Network([2, 2, 1]);
+		this.net = new Network([2, 3, 3, 2, 1]);
 	}
 	this.net.learn(learn || 0);
 	this.net.update();

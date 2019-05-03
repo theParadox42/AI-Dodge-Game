@@ -61,7 +61,7 @@ Player.prototype.display = function(){
 };
 Player.prototype.run = function(){
     if(!this.dead){
-        this.input(keyIsPressed);
+        this.input(keyIsPressed||mouseIsPressed);
         this.update();
     }
 };
